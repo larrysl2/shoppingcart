@@ -52,11 +52,13 @@ const Catalog =()=>{
     
     return(
         <div>
-            <div onClick={toggleCartViewOn}> Shopping Cart 
+            <div className ="ShoppingCartButton" onClick={toggleCartViewOn}> Shopping Cart 
                 <div>Total items: {addproduct}</div>
-            </div>
+            </div> 
+            {/* always display shopping cart button and image of cart or header */}
 
             <div>{products}</div>
+            {/* add images to products and display */}
 
             <div className="hidecart">
                 <div>{showcart}</div>
@@ -65,7 +67,8 @@ const Catalog =()=>{
                 <button>Checkout</button>
                 <button onClick={toggleCartViewOff}>Go Back</button>
             </div>
-
+            {/* display cart on click. scroll through images */}
+            {/* header thats same accross pages */}
             
 
         </div>
