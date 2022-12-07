@@ -1,6 +1,106 @@
 .hidecart{
-    display:none;
+    display: none;
+    justify-content: center;
+  
 }
 .CartDisplay{
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+    background-color: aqua;
+    z-index: 1001;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.ShoppingCartButton{
+    display:box;
+    height: 10%;
+    width: 10%;
+    align-items: center;
+    justify-content: center;
+}
+.ShoppingCartImg{
+    width: 100%;
+    height:100%;
+}
+.itemcount{
+    margin-left: 23%;
+}
+
+.productcontainer{
+    display:flex;
+    height:100%;
+    width:100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: aquamarine;
+}
+.productdetailscontainer{
+    display:flex;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    flex-direction: coulumn;
+    justify-content: center;
+    align-items: center;
+
+}
+.itemcontainer{
+    display:flex;
+    height:100%;
+    width:100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 10%;
+    border-color: aqua;
+    border-style: solid;
+}
+.productimg{
+    width: 90%;
+    height:90%;
+    background-color: aquamarine;
+}
+.deetz{
+    justify-content: center;
+    align-items: center;
+}
+.page{
     background-color: antiquewhite;
+}
+.cartdetails{
+    display:flex;
+    height:25%;
+    width: 25%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: antiquewhite;
+    font-size: 100%;
+}
+.showcartcontainer{
+   background-color: white;
+    height: 70%;
+    width:55%;
+    overflow-y:auto
+}
+.showcart{
+    height:50%;
+    width:100%;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-color: black;
+    border-style: solid;
+}
+.cartimg{
+    height:75%;
+    width:25%;
 }

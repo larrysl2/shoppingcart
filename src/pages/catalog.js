@@ -3,6 +3,7 @@ import { items } from "../items";
 import Product from "../components/product";
 import ShowCart from "../components/showcart";
 import "../styles/style.css";
+import shoppingcartimage from "../img/shoppingcart.png"
 const Catalog =()=>{
     const [addproduct, setaddproduct] = React.useState(0);
     const [totalcost, settotalcost] = React.useState(0);
@@ -17,20 +18,19 @@ const Catalog =()=>{
     //map out cart
     const showcart = cart.map((product)=>(
         <ShowCart
-        
             id={product.id}
             product={product}
             />
     ));
     const calcTotalCost = (product)=>{
-        settotalcost(totalcost+product.price);
+        settotalcost(10*(totalcost+product.price));
     };
     const addToCart = ()=>{
         setaddproduct((prevProduct)=>prevProduct+1);
     }
     const toggleCartViewOff = () =>{
         let showcart = document.querySelector(".CartDisplay");
-        showcart.classList.remove("CartDisplay")
+        showcart.classList.remove("CartDisplay");
         showcart.classList.add("hidecart");
         
     }
@@ -51,26 +51,26 @@ const Catalog =()=>{
     ));
     
     return(
-        <div>
-            <div className ="ShoppingCartButton" onClick={toggleCartViewOn}> Shopping Cart 
-                <div>Total items: {addproduct}</div>
+        <div className="page">
+            {/* addheader */}
+            <div className ="ShoppingCartButton" onClick={toggleCartViewOn}> 
+                <img className = "ShoppingCartImg" src = {shoppingcartimage}/>
+                <div className="itemcount">Total items: {addproduct}</div>
             </div> 
-            {/* always display shopping cart button and image of cart or header */}
-
-            <div>{products}</div>
-            {/* add images to products and display */}
+            
+            <div className="productcontainer">
+            <div className ="productdetailscontainer" >{products}</div>
+            </div>
 
             <div className="hidecart">
-                <div>{showcart}</div>
+                <div className="showcartcontainer">{showcart}</div>
+                <div className="cartdetails">
                 <div>Total items: {addproduct}</div>
                 <div>Total cost: {totalcost}</div>
                 <button>Checkout</button>
                 <button onClick={toggleCartViewOff}>Go Back</button>
+                </div>
             </div>
-            {/* display cart on click. scroll through images */}
-            {/* header thats same accross pages */}
-            
-
         </div>
     )    
 }
