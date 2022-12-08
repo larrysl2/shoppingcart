@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/style.css";
+import "../styles/showcartstyle.css";
 const ShowCart = (props)=>{
     return (
         <div className="showcart">

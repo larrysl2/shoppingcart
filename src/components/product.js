@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/productstyle.css";
 import "../styles/style.css";
 const Product = (props)=>{
     return (
@@ -7,8 +8,8 @@ const Product = (props)=>{
                 <img className ="productimg" src = {props.product.image}/>
                 <div className="deetz">
                 <div>{props.product.name}</div>
-                <div>{props.product.price}</div>
-                <button 
+                <div>${props.product.price}</div>
+                <button className = "button1"
                 onClick={(e)=>{
                     props.addItem();
                     props.addToCart();

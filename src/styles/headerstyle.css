@@ -1,0 +1,38 @@
+.HeaderContainer{
+    
+    display:flex;
+    background-color:#a2bac4;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+}
+.links{
+    margin-left:auto;
+    font-size: 200%;
+    text-decoration:none
+}
+.catalog{
+    
+    text-decoration:none;
+    font-family:sans-serif;
+    color:white
+}
+.home{
+    text-decoration:none;
+    font-family:sans-serif;
+    color:white;
+    margin-left:-10%;
+    margin-right:10%;
+}
+.home:hover{
+    color:gray;
+}
+.catalog:hover{
+    color:gray;
+}
+.shopname{
+    font-size:200%;
+    font-family:sans-serif;
+    text-decoration:none;
+    color:white
+}

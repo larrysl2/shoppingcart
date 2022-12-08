@@ -4,6 +4,7 @@ import Product from "../components/product";
 import ShowCart from "../components/showcart";
 import "../styles/style.css";
 import shoppingcartimage from "../img/shoppingcart.png"
+import "../styles/cartstyle.css"
 const Catalog =()=>{
     const [addproduct, setaddproduct] = React.useState(0);
     const [totalcost, settotalcost] = React.useState(0);
@@ -23,7 +24,7 @@ const Catalog =()=>{
             />
     ));
     const calcTotalCost = (product)=>{
-        settotalcost(10*(totalcost+product.price));
+        settotalcost(Math.round((totalcost+product.price)*100)/100);
     };
     const addToCart = ()=>{
         setaddproduct((prevProduct)=>prevProduct+1);
@@ -52,7 +53,7 @@ const Catalog =()=>{
     
     return(
         <div className="page">
-            {/* addheader */}
+            
             <div className ="ShoppingCartButton" onClick={toggleCartViewOn}> 
                 <img className = "ShoppingCartImg" src = {shoppingcartimage}/>
                 <div className="itemcount">Total items: {addproduct}</div>
@@ -66,9 +67,9 @@ const Catalog =()=>{
                 <div className="showcartcontainer">{showcart}</div>
                 <div className="cartdetails">
                 <div>Total items: {addproduct}</div>
-                <div>Total cost: {totalcost}</div>
-                <button>Checkout</button>
-                <button onClick={toggleCartViewOff}>Go Back</button>
+                <div>Total cost: ${totalcost}</div>
+                <button className="button1">Checkout</button>
+                <button className="button1" onClick={toggleCartViewOff}>Go Back</button>
                 </div>
             </div>
         </div>

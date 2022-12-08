@@ -1,0 +1,15 @@
+.showcart{
+    height:50%;
+    width:100%;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-color: black;
+    border-style: solid;
+}
+.cartimg{
+    height:75%;
+    width:25%;
+}
