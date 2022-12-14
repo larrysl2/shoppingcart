@@ -22,3 +22,4 @@ const Product = (props)=>{
     )
 }
 export default Product;
+//product component rendered when a product is clicked

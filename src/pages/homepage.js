@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import {Link} from "react-router-dom"
 import "../styles/homepagestyle.css";
 const Homepage = () =>{
-    useEffect(()=>{
+    useEffect(()=>{ //utilize the Fetch API to get random guitar gif and render before mount
     const gif = document.querySelector(".giphy");
     fetch('https://api.giphy.com/v1/gifs/translate?api_key=J2DZL9v1Hk1LQImLd2Y8aytzHIGK6WoW&s=guitar',{mode:'cors'})
         .then(function(response){

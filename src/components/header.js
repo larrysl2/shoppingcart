@@ -12,3 +12,4 @@ const Header =()=>{
     );
 }
 export default Header;
+//header component to be rendered

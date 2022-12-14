@@ -11,3 +11,4 @@ const ShowCart = (props)=>{
     )
 }
 export default ShowCart;
+//cart image to be rendered when view cart is clicked
